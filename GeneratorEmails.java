@@ -10,9 +10,10 @@ public class GeneratorEmails {
         
         var nombreNormalizado = nombreCompleto.replace(" ",".").toLowerCase();
         var empresaNormalizado = empresa.toLowerCase();
+        var dominioNormalizado = "@"+empresaNormalizado+dominio;
         var correo = new StringBuffer();
-        
-        correo.append(nombreNormalizado).append('@').append(empresaNormalizado).append(dominio);
+
+        correo.append(nombreNormalizado).append(dominioNormalizado);
 
         System.out.println("correo = " + correo);
     }
